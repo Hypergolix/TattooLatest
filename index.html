@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>CSS TATTOO</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="tattoo-icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="load_page()">
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>css tattoo</h1>
+        </div>
+    </div>
+    <div class="navBar">
+        <ul class="ul">
+            <!-- <li class="li"><a class="fColor" href="index.html">Home</a></li>
+             <li class="li"><a class="fColor" href="about.asp">About</a></li> -->
+            <li class="li"><a class="fColor" href="#" onclick="load_page(1)">Gallery</a></li>
+            <li class="li"><a class="fColor" href="#" onclick="load_page(2)">Pricing</a></li>
+            <li class="li"><a class="fColor" href="#" onclick="load_page(0)">Reviews</a></li>
+            <li class="li"><a class="fColor" href="#" onclick="load_page(3)">Contact Us</a></li>
+            <input type="text" placeholder="Search...">
+        </ul>
+    </div>
+
+
+    <div id="space" class="revContent"> </div>
+
+    <script>
+        // bad use of switch, should use a variable for the data instead
+        function load_page(whichPage) {
+            switch (whichPage) {
+                case 0:
+                    document.getElementById("space").innerHTML = '<object type="text/html" data="reviews.html" class="objSize" ></object>';
+                    break;
+                case 1:
+                    document.getElementById("space").innerHTML = '<object type="text/html" data="gallery.html" class="objSize" ></object>';
+                    break;
+                case 2:
+                    document.getElementById("space").innerHTML = '<object type="text/html" data="pricing.html" class="objSize" ></object>';
+                    break;
+                case 3:
+                    document.getElementById("space").innerHTML = '<object type="text/html" data="contact.html" class="objSize" ></object>';
+                    break;
+                default: // home would go here, 
+                    document.getElementById("space").innerHTML = '<object type="text/html" data="gallery.html" class="objSize" ></object>';
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+<footer>
+    <div class="navBar">
+        <ul class="ul">
+            <li class="li">
+                <a href="https://www.twitter.com"> <img class="icon" src="twitter.png"> </a>
+            </li>
+            <li class="li">
+                <a href="https://www.youtube.com"> <img class="icon" src="youtube.png"> </a>
+            </li>
+            <li class="li">
+                <a href="https://www.facebook.com"> <img class="icon" src="facebook.png"> </a>
+            </li>
+            <li class="li">
+                <a href="https://www.instagram.com"> <img class="icon" src="instagram.png"> </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+</html>
